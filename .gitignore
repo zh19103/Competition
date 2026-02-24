@@ -1,0 +1,25 @@
+# 虚拟环境（必须排除，体积大）
+a13_env/
+venv/
+env/
+
+# 密钥/环境变量文件（绝对不能提交！）
+*.env
+
+# 向量库数据（本地持久化，无需提交）
+a13_vector_db/
+
+# Python缓存文件
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE配置（如果用VS Code/PyCharm）
+.vscode/
+.idea/
+
+# 临时文件/日志
+*.log
+*.swp
+.DS_Store
