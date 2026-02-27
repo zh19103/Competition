@@ -34,12 +34,13 @@ python examples/query.py --q "10k" --top_k 5
 python examples/query.py
 
 ### 核心参数
-参数	                                说明	          示例
---q	检索关键词（必填）	                 --q            "10k 北京"
---top_k	返回条数（0 = 不限）	          --top_k         5
---min_sim	相似度阈值（0~1，默认 0.5）  	--min_sim       0.6
---all	返回全部高相似度结果	            --all
---model	千问模型名（默认qwen-plus）	    --model         qwen-plus
+| 参数                | 说明                                   | 示例       |
+|---------------------|----------------------------------------|:----------:|
+| --q                 | 检索关键词（必填）                     | "10k 北京" |
+| --top_k             | 返回条数（0 = 不限）                   | 5          |
+| --min_sim           | 相似度阈值（0~1，默认 0.5）            | 0.6        |
+| --all               | 返回全部高相似度结果                   |            |
+| --model             | 千问模型名（默认qwen-plus）            | qwen-plus  |
 
 ## 常见问题
 1,千问调用失败：Model not exist
@@ -49,7 +50,6 @@ python examples/query.py
 2,模型下载慢 / 卡住
 解决：设置国内镜像源后重新运行：
 export HF_ENDPOINT=https://hf-mirror.com  # Linux/Mac
-set HF_ENDPOINT=https://hf-mirror.com     # Windows
 
 3,向量库构建报错：--excel 参数必填
 解决：运行构建脚本时指定 Excel 文件路径：
