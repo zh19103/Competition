@@ -1,35 +1,126 @@
-# 虚拟环境（必须排除，体积大）
-a13_env/
-venv/
-env/
-
-# 密钥/环境变量文件（绝对不能提交！）
-*.env
-
-# 向量库数据（本地持久化，无需提交）
-a13_vector_db/
-
-# Python缓存文件
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-
-# IDE配置（如果用VS Code/PyCharm）
-.vscode/
-.idea/
-
-# 临时文件/日志
-*.log
-*.swp
-.DS_Store
-# 忽略 Chroma 向量库目录
+# ===================== 项目专属忽略规则（核心） =====================
+# 忽略Chroma向量库目录（适配你的examples目录下的.chroma）
+examples/.chroma/
 .chroma/
 
-# 忽略 SQLite 数据库文件
-*.sqlite3
+# 忽略岗位数据Excel文件（可选，如果你不想提交私有数据）
+# 注意：如果需要别人测试，可注释这行；如果是敏感数据，保留
+*.xls
+*.xlsx
+*.csv
 
-# 忽略日志和缓存文件
-*.log
-*.pyc
+# ===================== Python通用忽略规则 =====================
+# 字节编译/优化/DLL文件
 __pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# 虚拟环境
+venv/
+env/
+ENV/
+*.env
+a13_env/  # 你的虚拟环境名（如果有）
+
+# 日志文件
+*.log
+logs/
+
+# 缓存文件
+*.cache
+*.pid
+*.seed
+*.pid.lock
+
+# 测试/覆盖率报告
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# ===================== 系统/编辑器通用忽略规则 =====================
+# macOS系统文件
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows系统文件
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Linux系统文件
+*.swp
+*.swo
+*~
+
+# IDE/编辑器配置文件
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.sublime-project
+
+# ===================== 其他通用忽略 =====================
+# 临时文件
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# 数据库文件
+*.sqlite3
+*.db
+*.db-journal
+
+# 网络抓包文件
+*.pcap
+
+# 压缩包
+*.zip
+*.tar.gz
+*.rar
+*.7z
