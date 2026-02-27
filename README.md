@@ -9,7 +9,7 @@
 
 ## 快速开始
 ### 1. 环境准备
-```bash
+
 # 安装依赖
 pip install chromadb sentence-transformers dashscope pandas openpyxl
 
@@ -45,7 +45,7 @@ python examples/query.py
 千问调用失败：使用官方模型名qwen-plus（非qwen-3.5-plus）
 模型下载慢：设置国内镜像export HF_ENDPOINT=https://hf-mirror.com
 向量库构建报错：确保--excel参数指定正确的 Excel 文件路径
-plaintext
+
 
 ### 核心特点
 1. 极简结构：只保留「功能-快速开始-参数-常见问题」4个核心模块，无冗余信息；
@@ -53,4 +53,3 @@ plaintext
 3. 重点突出：关键参数、常见问题一目了然，解决使用中90%的问题；
 4. 格式清晰：用表格/代码块区分内容，阅读成本低。
 
-如果需要补充额外信息（如可视化界面、部署说明），可在`核心功能`或`快速开始`后新增简短小节，保持整体简洁性即可。
