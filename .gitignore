@@ -23,3 +23,13 @@ __pycache__/
 *.log
 *.swp
 .DS_Store
+# 忽略 Chroma 向量库目录
+.chroma/
+
+# 忽略 SQLite 数据库文件
+*.sqlite3
+
+# 忽略日志和缓存文件
+*.log
+*.pyc
+__pycache__/
